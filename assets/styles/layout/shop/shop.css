@@ -1,0 +1,188 @@
+/* start root */
+:root {
+  --color-main: #fed700;
+  --color-secondary: #333e48;
+  --color-white: #fff;
+  --color-mark: #ee0000;
+  --color-mark-active: #df3737;
+  --color-gray: #7c7c7c;
+  --color-border: #e8e8e8;
+  --color-border-line: #ddd;
+  --color-link: #007aff;
+  --paragraph-color: #777;
+  --background-color: #f5f5f5;
+  --font-family: "Open Sans", sans-serif;
+  --main-transition: 0.3s ease-in-out;
+  --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --box-shadow-card: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* end root */
+
+.filter-title {
+  border-bottom: 1px solid var(--color-border-line);
+  font-size: 19px;
+  position: relative;
+  padding-bottom: 10px;
+  letter-spacing: 1.4px;
+}
+.filter-title::before {
+  content: "";
+  width: 40%;
+  height: 2px;
+  background-color: var(--color-main);
+  position: absolute;
+  bottom: 0;
+}
+.filter_status-title {
+  font-size: 14px;
+  margin: 30px 0 10px;
+  font-weight: 600;
+}
+.filter-items .filter-item {
+  margin-bottom: 7px;
+}
+.filter-items .checkbox input {
+  display: none;
+}
+.filter-items .checkbox label {
+  font-size: 14px;
+  color: #55585b;
+  position: relative;
+  padding-left: 26px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.filter-items .checkbox label::before {
+  position: absolute;
+  content: url(https://shofy-angular.vercel.app/assets/img/product/icons/check.svg);
+  top: 2px;
+  left: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--main-transition);
+}
+
+.filter-items .checkbox label::after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  line-height: 12px;
+  text-align: center;
+  border: 2px solid #dadada;
+  z-index: -1;
+  transition: all 0.2s 0s ease-out;
+}
+.filter-items .checkbox label.active::before {
+  visibility: visible;
+  opacity: 1;
+}
+.filter-items .checkbox label.active::after {
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+}
+.filter__category-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-white);
+  overflow-y: scroll;
+}
+
+.filter__category-item {
+  margin-bottom: 20px;
+}
+.filter__category-pointer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 0 13px;
+  cursor: pointer;
+  transition: var(--main-transition);
+  color: var(--color-secondary);
+  position: relative;
+  font-size: 14px;
+}
+.filter__category-pointer::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  background-color: var(--color-border);
+  transition: var(--main-transition);
+  border-radius: 50%;
+}
+.filter__category-pointer span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 13px;
+  border: 1px solid var(--color-border-line);
+  transition: var(--main-transition);
+}
+.filter__category-pointer:hover {
+  color: var(--color-link);
+}
+.filter__category-pointer:hover::before,
+.filter__category-pointer:hover span {
+  background-color: var(--color-link);
+  color: var(--color-white);
+}
+
+.filter__rated-product {
+  display: flex;
+  margin-bottom: 20px;
+}
+.filter__rated-product-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  background: var(--color-border);
+  margin-right: 20px;
+}
+
+.product__content-icon-parent {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: var(--color-gray);
+}
+.product__content-start {
+  display: flex;
+  margin-right: 5px;
+}
+
+.product__content-start-icon {
+  color: #ffb21d;
+  margin-right: 2px;
+}
+.product__content-link {
+  margin: 7px 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.product__content-price {
+  font-size: 14px;
+  color: var(--color-gray);
+}
+/* Products Start */
+.shop__content-title {
+  font-size: 25px;
+  font-weight: 300;
+}
+.shop__content-result {
+  color: var(--color-secondary);
+  font-size: 14px;
+}
+
+/* Products End */
+/* End Shop */
